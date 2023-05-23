@@ -1,0 +1,1 @@
+('root', 'abc123456', 3306, 'localhost', 'all_words', 'utf8')
