@@ -2,18 +2,21 @@ class Node:
     """
     节点类
     """
+
     def __init__(self, item):
         self.item = item
-        self.child1 = None   # 左子节点
-        self.child2 = None   # 右子节点
+        self.child1 = None  # 左子节点
+        self.child2 = None  # 右子节点
 
 
 class BinaryTree:
     """
     二叉树类
     """
+
     def __init__(self):
         self.root = None  # 根节点
+        self.result = []
 
     def add(self, item):
         """
@@ -77,11 +80,16 @@ class BinaryTree:
         right_item = self.postorder(root.child2)
         return left_item + right_item + result
 
+    def everyLeval(self, root):
+        """二叉树实现层次遍历"""
+        pass
+
 
 if __name__ == '__main__':
     t = BinaryTree()
-    for i in range(4):
+    for i in "avoid":
         t.add(i)
     print("前序遍历：", t.preorder(t.root))
     print("中序遍历：", t.inorder(t.root))
     print("后序遍历：", t.postorder(t.root))
+
